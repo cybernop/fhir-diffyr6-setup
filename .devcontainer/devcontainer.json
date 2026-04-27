@@ -1,0 +1,15 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+	"name": "FHIR Development",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"postCreateCommand": "/workspace/init.sh",
+	"mounts": [
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/devel/gematik/fhir-ti-common,target=/workspace/igs/ti-common/resources,type=bind"
+	],
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+	"workspaceFolder": "/workspace"
+}
