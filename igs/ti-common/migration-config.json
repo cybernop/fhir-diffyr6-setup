@@ -1,0 +1,13 @@
+{
+  "configVersion": "1.3.1",
+  "packageId": "de.gematik.ti",
+  "enableGoFSH": false,
+  "resourcesDir": "resources",
+  "resourcesR6Dir": "resourcesR6",
+  "compareDir": "compare",
+  "outputDir": "output",
+  "compareMode": "incremental",
+  "exportZip": true,
+  "skipTerminologyReport": false,
+  "skipSearchParameterReport": false
+}

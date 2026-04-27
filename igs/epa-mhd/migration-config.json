@@ -1,0 +1,13 @@
+{
+  "configVersion": "1.1.2",
+  "packageId": "de.gematik.epa.mhd",
+  "enableGoFSH": false,
+  "resourcesDir": "resources",
+  "resourcesR6Dir": "resourcesR6",
+  "compareDir": "compare",
+  "outputDir": "output",
+  "compareMode": "incremental",
+  "exportZip": true,
+  "skipTerminologyReport": false,
+  "skipSearchParameterReport": false
+}
