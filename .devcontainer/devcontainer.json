@@ -7,9 +7,7 @@
 		"dockerfile": "Dockerfile"
 	},
 	"postCreateCommand": "/workspace/init.sh",
-	"mounts": [
-		"source=${localEnv:HOME}${localEnv:USERPROFILE}/devel/gematik/fhir-ti-common,target=/workspace/igs/ti-common/resources,type=bind"
-	],
+	"mounts": [],
 	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
 	"workspaceFolder": "/workspace"
 }
