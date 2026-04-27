@@ -1,0 +1,7 @@
+**/resources
+**/fsh-generated
+**/output
+**/compare
+
+**/validator_cli.jar
+**/*.log
