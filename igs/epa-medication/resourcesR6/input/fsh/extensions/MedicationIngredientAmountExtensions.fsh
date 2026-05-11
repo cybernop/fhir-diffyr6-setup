@@ -1,0 +1,14 @@
+Extension: MedicationIngredientAmountExtensions
+Id: medication-ingredient-amount-extension
+Description: "Free-text amount of the ingredient for classical Latin notations such as \"ad 100.0\" or \"quantum satis,\" including the unit."
+* insert Meta
+// preserve the version
+* ^version = "1.3.0"
+* ^date = "2025-12-15"
+* ^status = #active
+
+* value[x] only string
+* valueString 1..
+  * ^short = "Free-text amount of an ingredient in a formulation."
+  * ^definition = "Free-text amount of the ingredient for classical Latin notations such as \"ad 100.0\" or \"quantum satis,\" including the unit."
+  * ^maxLength = 20

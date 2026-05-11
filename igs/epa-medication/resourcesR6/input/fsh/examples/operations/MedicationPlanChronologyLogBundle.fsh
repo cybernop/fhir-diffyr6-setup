@@ -1,0 +1,102 @@
+Alias: $example-epa-get-medication-plan-chronology-log-bundle-url-page1 = http://epa4all/epa/medication/api/v1/fhir/$medication-plan-log&_count=10&_offset=0
+
+// AUTO-DISABLED (SUSHI R6): Instance: MedicationPlanChronologyLogBundle
+// AUTO-DISABLED (SUSHI R6): InstanceOf: Bundle
+// AUTO-DISABLED (SUSHI R6): Usage: #example
+// AUTO-DISABLED (SUSHI R6): * id = "medication-plan-chronology-log-bundle"
+// AUTO-DISABLED (SUSHI R6): * identifier[+]
+  // AUTO-DISABLED (SUSHI R6): * value = "urn:uuid:e83d33d2-5dfe-4e23-a9fc-557c10a02f5e"
+  // AUTO-DISABLED (SUSHI R6): * system = $ns-urn-uuid
+// AUTO-DISABLED (SUSHI R6): * timestamp = "2026-08-03T14:10:00+01:00"
+// AUTO-DISABLED (SUSHI R6): * type = #searchset
+// AUTO-DISABLED (SUSHI R6): * total = 3
+// AUTO-DISABLED (SUSHI R6): * link[+]
+  // AUTO-DISABLED (SUSHI R6): * relation = "self"
+  // AUTO-DISABLED (SUSHI R6): * url = $example-epa-get-medication-plan-chronology-log-bundle-url-page1
+// AUTO-DISABLED (SUSHI R6): 
+// AUTO-DISABLED (SUSHI R6): * insert BundleEntrySearch(ExpEMPChronologyProvenance3, Provenance, 283ea1a2-abbe-4404-b412-d27d45e8a845, #match)
+// AUTO-DISABLED (SUSHI R6): * insert BundleEntrySearch(ExpEMPChronologyProvenance2, Provenance, 75f7a1f9-5bc8-4ff8-884e-120caf30dde5, #match)
+// AUTO-DISABLED (SUSHI R6): * insert BundleEntrySearch(ExpEMPChronologyProvenance1, Provenance, afacd2a0-f3e8-4cc1-ac47-be7a44fe01a3, #match)
+
+// Example Provenance instances
+
+Instance: ExpEMPChronologyProvenance1
+InstanceOf: EMPChronologyProvenanceR6
+Usage: #inline
+* insert EMPChronologyProvenanceInstanceMeta
+* id = "afacd2a0-f3e8-4cc1-ac47-be7a44fe01a3"
+* meta
+  * versionId = "1"
+  * lastUpdated = "2026-07-11T11:15:00+01:00"
+* extension[isEMPChronology].valueBoolean = true
+* target[+] = Reference(MedicationRequest/29d46448-b585-4501-9660-a1236436560f/_history/1)
+* target[+] = Reference(MedicationRequest/9f5200a9-deaf-4c11-ab68-fc4d1c9db92b/_history/1)
+* target[+] = Reference(MedicationRequest/f9a249c2-8304-45d9-8b8f-b2865351b17b/_history/1)
+* occurredDateTime = "2026-07-11T11:15:00+01:00"
+* recorded = "2026-07-11T11:15:00+01:00"
+* activity
+  * coding = $v3-DataOperation#UPDATE "revise"
+* agent[0]
+  * type
+    * coding = $provenance-participant-type#author
+  * who = Reference(Organization/8B421590-9F7F-46BE-BD1E-C987063AC4F5)
+  * who
+    * identifier
+      * system = $sid-identifier-telematik-id
+      * value = "9-2.58.00000040"
+    * display = "gematik Apotheke"
+
+
+Instance: ExpEMPChronologyProvenance2
+InstanceOf: EMPChronologyProvenanceR6
+Usage: #inline
+* insert EMPChronologyProvenanceInstanceMeta
+* meta
+  * versionId = "1"
+  * lastUpdated = "2026-07-11T14:20:00+01:00"
+* id = "75f7a1f9-5bc8-4ff8-884e-120caf30dde5"
+* extension[isEMPChronology].valueBoolean = true
+* target[+] = Reference(MedicationRequest/29d46448-b585-4501-9660-a1236436560f/_history/1)
+* target[+] = Reference(MedicationRequest/9f5200a9-deaf-4c11-ab68-fc4d1c9db92b/_history/2)
+* target[+] = Reference(MedicationRequest/f9a249c2-8304-45d9-8b8f-b2865351b17b/_history/1)
+* occurredDateTime = "2026-07-11T14:20:00+01:00"
+* recorded = "2026-07-11T14:20:00+01:00"
+* activity
+  * coding = $v3-DataOperation#UPDATE "revise"
+* agent[0]
+  * type
+    * coding = $provenance-participant-type#author
+  * who = Reference(Organization/8B421590-9F7F-46BE-BD1E-C987063AC4F5)
+  * who
+    * identifier
+      * system = $sid-identifier-telematik-id
+      * value = "9-2.58.00000040"
+    * display = "gematik Apotheke"
+
+
+Instance: ExpEMPChronologyProvenance3
+InstanceOf: EMPChronologyProvenanceR6
+Usage: #inline
+* insert EMPChronologyProvenanceInstanceMeta
+* meta
+  * versionId = "1"
+  * lastUpdated = "2026-08-03T14:00:00+01:00"
+* id = "283ea1a2-abbe-4404-b412-d27d45e8a845"
+* extension[isEMPChronology].valueBoolean = true
+* target[+] = Reference(MedicationRequest/29d46448-b585-4501-9660-a1236436560f/_history/1)
+* target[+] = Reference(MedicationRequest/9f5200a9-deaf-4c11-ab68-fc4d1c9db92b/_history/2)
+* target[+] = Reference(MedicationRequest/f9a249c2-8304-45d9-8b8f-b2865351b17b/_history/1)
+* target[+] = Reference(MedicationRequest/da4009cc-ee0d-40a4-92fc-402fd6b0c129/_history/1)
+* occurredDateTime = "2026-08-03T14:00:00+01:00"
+* recorded = "2026-08-03T14:00:00+01:00"
+* activity
+  * coding = $v3-DataOperation#UPDATE "revise"
+* agent[0]
+  * type
+    * coding = $provenance-participant-type#author
+  * who = Reference(Organization/8B421590-9F7F-46BE-BD1E-C987063AC4F5)
+  * who
+    * identifier
+      * system = $sid-identifier-telematik-id
+      * value = "9-2.58.00000040"
+    * display = "gematik Apotheke"
